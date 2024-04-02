@@ -31,7 +31,18 @@ span, a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 
+}
+.div3{
+    color: #C4BFBD;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.div2{
+    font-size: 22px;
 }
 .box{
     text-align: center;
@@ -252,6 +263,45 @@ margin-top: 80px;
     background-repeat: no-repeat;
     box-shadow: inset 10px 10px 10px black;
 }
+.qator{
+    text-align: center;
+}
+.btn1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+.lkjhg span{
+    font-size: 1em;
+}
+.chiziq_a{
+    width: 20%;
+    height: 4px;
+    background-color: aqua;
+    filter: blur(1.9px);
+}
+.lkjhg{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chiziq{
+    width: 40%;
+    height: 2px;
+    background-color: aqua;
+filter: blur(1.3px);
+margin: auto;
+text-align: center;
+}
+.btn22{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
 .kip{
     width: 30%;
     margin-left: auto;
@@ -287,7 +337,7 @@ margin-top: 80px;
  }
  .picb{
     width: 100%;
-    height: 600px;
+
  }
  .chap{
     display: flex;
@@ -364,8 +414,8 @@ margin-top: 80px;
 
  }
  .pic0{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
  }
  .divw{
@@ -375,7 +425,26 @@ margin-top: 80px;
  }
  .spanm{
     margin-left: 30px;
-    border-bottom:5px dashed red;
+position: relative;
+color: #F5BE32;
+padding: 10px 0px;
+ }
+ .spanm::after{
+position: absolute;
+content: '';
+left: 0;
+top: 100%;
+width: 100%;
+height: 3px;
+background-color: #F3D382;
+transform: translateY(10px);
+opacity: 0;
+transition: 0.4s;
+
+ }
+ .spanm:hover::after{
+    transform: translateY(0);
+    opacity: 1;
  }
  .muxim{
     background-color: #2E2E2E;
@@ -392,6 +461,12 @@ margin-top: 80px;
  .muxim{
     max-width: 1600px;
     margin: 40px auto;
+ }
+ .bars{
+    font-size: 25px;
+    color: aliceblue;
+    transform: rotate(180deg);
+    display: none;
  }
  .s1{
     line-height: 1.6;
@@ -483,7 +558,42 @@ margin-top: 80px;
     .ip{
         font-size: 20px;
     }
-  
+  .bars{
+    display: block;
+
+  }
+  .div2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    
+  }
+  .nav{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #2E2E2E;
+    padding: 10px 12px;
+    text-align: center;
+   /* height: 100vh; */
+   width: 50vw;
+   padding-top: 50px;
+   z-index: 1000;
+   box-shadow: inset 0px 0px 10px 5px #e8d60ed3;
+   display: none;
+
+  }
+  .span1{
+    margin: 0;
+    margin-bottom: 88px;
+    font-size: 30px;
+    width: 100%;
+  }
+  .div2:hover .nav{
+display: block;
+  }
 }
 @media(max-width:600px){
     .p54{
@@ -517,16 +627,12 @@ margin-top: 80px;
     .h1{
         font-size: 40px;
     }
-    .pic1{
-        display: none;
-    }
+ 
     .div1{
         width: 100%;
         text-align: center;
     }
-    .div2{
-        width: 100%;
-    }
+   
     .btn1{
         font-size: 25px;
     }
@@ -612,15 +718,63 @@ margin-top: 80px;
     .gy{
         display: none ;
     }
-
+.ol{
+    padding: 10px 12px;
+}
+.btn6{
+width: 100%;
+}
     .kip{
         width: 100%;
        }
+       .icon{
+        animation: aq 2s infinite;
+       }
+       @keyframes aq {
+        50%{
+            transform: translateY(-20px);
+        }
+        75%{
+            transform: translate(0);
+        }
+        100%{
+            transform: translateY(0) rotateY(360deg);
+        }
+        
+       }
+       .xz{
+        animation: sq 2s infinite;
+       }
+       @keyframes sq 
+       {
+       70%{
+        transform: scale(1.2);
+       } 
+       75%{
+        transform: scale(1.2) rotate(10deg);
+       }
+       85%{
+        transform: scale(1.2) rotate(-10deg);
+       }
+       92%{
+        transform: scale(1.2) rotate(10deg);
+       }
+       100%{
+        transform: scale(1.2) rotate(0deg);
+       }
+       }
+}
+@media(max-width:450px){
+    .btn1, .btn22{
+        width: 100%;
+        border-radius: 10px;
+      }
 }
 @media(max-width:400px){
   .p1{
     font-size: 20px;
   }
+ 
   .p11{
     margin: 20px 0px;
   }
